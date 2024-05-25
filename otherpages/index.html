@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"> <img src="../image/logo.png" alt=""> </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">Acerca de</a> </li>
+          <li> <a href="#rooms" class="nav-link">Habitaciones</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+          <li> <a href="#gallery" class="nav-link">Galeria</a> </li>
+          <li> <a href="../otherpages/login.html" class="nav-link">Iniciar Sesion</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script> //SCRIPT LIBRE numero 1 para ir a las secciones de la pagina
+    const navMenu = document.querySelector('.nav-menu');
+
+    function mobileMenu() {
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Bienvenidos</h1>
+          <p>Bienvenidos a Hotel el Pacifico, donde el lujo y la comodidad se encuentran con la belleza del oceano.
+             Nos complace tener la oportunidad de ofrecerle una estancia inolvidable en nuestro hermoso hotel, 
+             situado en la costa pintoresca que le brindara vistas espectaculares y una experiencia inigualable. </p>
+        </div>
+      </div>
+      <div class="image">
+        <img src="../image/home1.jpg" class="slide">
+      </div>
+    </div>
+  </section>
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input type="date" placeholder="Check-in-Date">
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input type="date" placeholder="Check-out-Date">
+        </div>
+        <div class="box">
+          <label>Adultos:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+        <div class="box">
+          <label>Ninos:</label> <br>
+          <input type="number" placeholder="0">
+        </div>
+      </div>
+      <div class="search">
+        <a href="../otherpages/FindRoom.php"><input type="submit" id="searchButton" value="SEARCH ROOMS"></a>
+      </div>
+      <script>
+        // Obtener el botón de búsqueda por su ID
+        var searchButton = document.getElementById('searchButton');
+    
+        // Función para cambiar el color del botón cuando se pasa el cursor sobre él
+        searchButton.addEventListener('mouseover', function() {
+            searchButton.style.backgroundColor = 'black'; // Cambiar a un tono más claro de café
+        });
+    
+        // Función para restaurar el color original cuando se retira el cursor del botón
+        searchButton.addEventListener('mouseout', function() {
+            searchButton.style.backgroundColor = '#109DFA'; // Restaurar el color café original
+        });
+    </script>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="../image/a1.jpg" alt="" class="image1">
+          <img src="../image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>FUSIONANDO LA COMODIDAD CON EL LUJO</h5>
+          <h2>Bienvenidos a El Pacifico Hotel</h2>
+          <p>En Hotel el Pacífico, nuestro compromiso es hacer que su visita sea excepcional. Desde nuestras elegantes y acogedoras habitaciones hasta nuestras instalaciones de primera clase, cada detalle ha sido diseñado para garantizar su máxima comodidad y satisfacción. Disfrute de nuestra piscina infinita con vista al mar, relájese en nuestro spa de servicio completo o deléitese con la exquisita gastronomía de nuestros restaurantes.</p>
+          <button class="btn1">LEER MAS</button>
+        </div>
+        <script>
+          $(document).ready(function() {
+            // Seleccionar el botón "LEER MÁS"
+            $('.btn1').click(function() {
+              // Mostrar un mensaje emergente
+              alert("Gracias por tu interes en El Pacifico Hotel, Si tienes alguna pregunta, no dudes en contactarnos a 8713813348 Octavio_126 y 8715625739 Gabo_RM");
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top" id="rooms">
+    <div class="container">
+      <div class="text">
+        <h2>Nuestras Amenidades</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Piscina</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yoga</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa & masajes</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Tours en barco</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Lecciones de surf</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Sala de conferencias</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Manejo & competencias</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Playa privada</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="../image/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Nuestros Restaurantes</h2>
+          <p>Disfruta de la mejor gastronomia en el mundo en un solo lugar.</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Cocina Italiana</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Cocina Mexicana</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Cocina Japonesa</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Cocina Indu</h2>
+            <div class="accordionItemContent">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script> //Script libre numero 2 para ver la descripcion de cada tipo de cocina
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+  <section class="gallary mtop " id="gallery">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>Bienvenidos a nuestra galeria de fotos</h5>
+          <h2>Galeria de fotos de nuestro hotel</h2>
+        </div>
+        <div class="button">
+          <button class="btn1">VER GALERIA</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="../image/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../image/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../image/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../image/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../image/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../image/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../image/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="../image/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+  <script> //CARRUSEL DE IMAGENES
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+  <footer class="footer">
+    <p>Todos los derechos reservados. Octavio Cervantes y Angel Romero </p>
+</footer>
+</body>
+
+</html>
